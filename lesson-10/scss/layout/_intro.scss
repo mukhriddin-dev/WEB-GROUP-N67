@@ -1,0 +1,209 @@
+.intro{
+   width: 100%;
+   padding: 150px 100px;
+   background-color: $main-bg-light;
+   height: 735px;
+   background-image:url("../../images/Image.png");
+   background-repeat: no-repeat;
+   background-size:auto;
+   background-position: 80% 153px;
+
+
+   &__wrapper{
+      width: 493px;
+      height: 353px;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+
+      h1{
+         font-size: $h1-desktop;
+         span{
+            color:$main-bg-orange;
+         }
+      }
+
+      p{
+         color:$main-bg-gray;
+      }
+
+      a{
+         text-decoration: none;
+         color:#fff;
+
+      }
+
+      .intro-btn{
+         filter: drop-shadow(4px 5px 15px rgba(255, 83, 0, 0.4));
+         padding: 10px 18px;
+         background-color: $main-bg-orange;
+         border-radius: 5px;
+         margin-top: 50px;
+         width: 150px;
+         height: 50px;
+      }
+   }
+}
+
+
+// RESPONSIVE
+
+
+@media #{$media-tablet} {
+   .intro{
+      width: 100%;
+      padding: 120px 60px;
+      background-color: $main-bg-light;
+      height: 735px;
+      background-image:url("../../images/tablet-intro.png");
+      background-repeat: no-repeat;
+      background-size:auto;
+      background-position: 100% 153px;
+   
+   
+      &__wrapper{
+         width: 349px;
+         height: 316px;
+         display: flex;
+         justify-content: space-between;
+         flex-direction: column;
+   
+         h1{
+            font-size: $h1-tablet;
+            span{
+               color:$main-bg-orange;
+            }
+         }
+   
+         p{
+            color:$main-bg-gray;
+         }
+   
+         a{
+            text-decoration: none;
+            color:#fff;
+   
+         }
+   
+         .intro-btn{
+            filter: drop-shadow(4px 5px 15px rgba(255, 83, 0, 0.4));
+            padding: 10px 18px;
+            background-color: $main-bg-orange;
+            border-radius: 5px;
+            margin-top: 50px;
+            width: 150px;
+            height: 50px;
+         }
+      }
+   }
+   
+ }
+ 
+ @media #{$media-mobile} {
+   .intro{
+      width: 100%;
+      padding:26px;
+      background-color: $main-bg-light;
+      min-height: 735px;
+      background-image:url("../../images/tablet-intro.png");
+      background-repeat: no-repeat;
+      background-size:auto;
+      background-position: 80% 153px;
+   
+   
+      &__wrapper{
+         width: 323px;
+         height: 308px;
+         display: flex;
+         justify-content: space-between;
+         flex-direction: column;
+         margin-top: 352px;
+         text-align: center;
+   
+         h1{
+            font-size: $h1-mobile;
+            span{
+               color:$main-bg-orange;
+            }
+         }
+   
+         p{
+            color:$main-bg-gray;
+         }
+   
+         a{
+            text-decoration: none;
+            color:#fff;
+   
+         }
+   
+         .intro-btn{
+            filter: drop-shadow(4px 5px 15px rgba(255, 83, 0, 0.4));
+            padding: 10px 18px;
+            background-color: $main-bg-orange;
+            border-radius: 5px;
+            width: 150px;
+            height: 50px;
+            margin: 20px auto;
+            display: block;
+         }
+      }
+   
+   
+   }
+   
+ }
+ 
+ @media #{$media-mobile-sm} {
+   .intro{
+      width: 100%;
+      padding:26px;
+      background-color: $main-bg-light;
+      min-height: 735px;
+      background-image:url("../../images/tablet-intro.png");
+      background-repeat: no-repeat;
+      background-size:auto;
+      background-position: 80% 153px;
+   
+   
+      &__wrapper{
+         width: 323px;
+         height: 308px;
+         display: flex;
+         justify-content: space-between;
+         flex-direction: column;
+         margin-top: 352px;
+         text-align: center;
+   
+         h1{
+            font-size: $h1-mobile;
+            span{
+               color:$main-bg-orange;
+            }
+         }
+   
+         p{
+            color:$main-bg-gray;
+         }
+   
+         a{
+            text-decoration: none;
+            color:#fff;
+   
+         }
+   
+         .intro-btn{
+            filter: drop-shadow(4px 5px 15px rgba(255, 83, 0, 0.4));
+            padding: 10px 18px;
+            background-color: $main-bg-orange;
+            border-radius: 5px;
+            width: 150px;
+            height: 50px;
+            margin: 20px auto;
+            display: block;
+         }
+      }
+   }
+   
+ }
+ 

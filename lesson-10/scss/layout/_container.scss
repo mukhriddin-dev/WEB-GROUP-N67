@@ -1,0 +1,30 @@
+.container{
+   max-width: 1440px;
+   margin:0 auto ;
+   padding: 0 20px;
+}
+
+@media #{$media-tablet} {
+   .container{
+      max-width: 768px;
+      margin:0 auto ;
+      padding: 0 10px;
+   }
+ }
+ 
+ @media #{$media-mobile} {
+   .container{
+      max-width: 576px;
+      margin:0 auto ;
+      padding: 0 5px;
+   }
+ }
+ 
+ @media #{$media-mobile-sm} {
+   .container{
+      max-width: 375px;
+      margin:0 auto ;
+      padding: 0 0px;
+   }
+ }
+ 

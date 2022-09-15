@@ -1,0 +1,20 @@
+$media-desktop: "only screen and (max-width : 100%)";
+$media-tablet: "only screen and (max-width : 768px)";
+$media-mobile: "only screen and (max-width : 576px)";
+$media-mobile-sm: "only screen and (max-width : 375px)";
+
+@media #{$media-desktop} {
+  background: red;
+}
+
+@media #{$media-tablet} {
+  background: red;
+}
+
+@media #{$media-mobile} {
+  background: red;
+}
+
+@media #{$media-mobile-sm} {
+  background: red;
+}
