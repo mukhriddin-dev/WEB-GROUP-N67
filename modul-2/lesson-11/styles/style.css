@@ -1,0 +1,29 @@
+*::after,*::before,*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body{
+   overflow-x: hidden;
+}
+
+.nav{
+   height: 70px;
+}
+
+.card{
+   width: 650px;
+}
+
+
+@media only screen and (max-width:1300px){
+   .card-wrapper{
+      display: flex;
+      flex-wrap: wrap;
+   }
+   .card{
+      width: 50%;
+      margin: 10px auto;
+   }
+}
