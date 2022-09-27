@@ -1,0 +1,5 @@
+- logical operators => == qiymatni tekshiradi , === type bilan  , !  not (emas) , && , ||
+— Conditional operator "if else"
+— Ternary operator 
+— "switch" statement
+— Loops: while and for ( while, do..while and for(..;..;..) )
