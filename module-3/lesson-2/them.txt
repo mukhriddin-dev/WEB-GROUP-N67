@@ -1,0 +1,6 @@
+1. variables => var , let , const 
+1.1 matematik amallar
+2. o'zlashtish operatorlari , a+=b; a=a+b;
+3. Math => Math.trunc() , 
+4. solishtirish , >= , <= , > , > , ==
+
