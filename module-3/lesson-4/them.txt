@@ -22,7 +22,7 @@ Array simple methods
 
 .join('-');
 
-.slice(1);
+.slice(1);  
 
 .indexOf('b');
 
@@ -35,6 +35,5 @@ String.toUpperCase();
 String.toLowerCase();
 String.substring(x,y);
 String.search();
-String.trim();
 String.match();
 charAt(n)
