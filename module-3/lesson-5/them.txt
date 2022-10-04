@@ -21,7 +21,6 @@ getElementsByClassName()
 getElementById()
 
 querySelector()
-
 querySelectorAll()
 
 HTML DOM Element style Property
