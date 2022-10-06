@@ -1,0 +1,42 @@
+#lesson 6 2022.10.06 
+
+Events
+
+addEvenetListener / on (difference)
+JavaScript DOM events
+Mouse events:
+
+click
+
+dblclick
+
+mouseover
+
+mouseout
+
+mouseup
+
+mousedown
+
+mousemove
+
+
+Keyboard events:
+
+Keydown
+Keyup
+Kuypress
+Form events:
+
+focus
+blur
+change
+input
+
+submit
+
+Scroll & window Event
+
+scroll
+DOMContentLoaded
+load
