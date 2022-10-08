@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- BS ICONS -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+   <!-- BOOTSTRAP CDN -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+   integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+   <!-- CSS only -->
+ <link rel="stylesheet" href="./style.css">
+
+   <title>lesson-7</title>
+</head>
+
+<body>
+   <div class="modal-wrapper d-none">
+      <div class="modal-box">
+         <h1 class="text-center text-success" id="modal-text">
+
+         </h1>
+      </div>
+   </div>
+
+   <div class="container">
+     
+      <div class="row">
+         <div class="col-12">
+            <div class="card mt-5 shadow p-5 mx-auto w-75 ">
+               <h2 class="text-center text-primary" id="notif">
+                  LOGIN FORM
+               </h2>
+               <form action="#" class="form" id="login">
+                  <label for="user_name" class="d-block w-75 mx-auto my-4">
+                     Username
+                     <input type="text" placeholder="Enter Username" class="form-control p-3" required>
+                  </label>
+                  <label for="user_password" class="d-block w-75 mx-auto my-4 position-relative">
+                     Password
+                     <input type="password" placeholder="Enter password" class="form-control p-3" required>
+                     <span id="indicator" class="ind d-none">
+                        <i class="bi bi-eye-fill"></i>
+                     </span>
+                  </label>
+                  <button class="btn btn-primary w-75 mx-auto d-block" type="submit">LOGIN</button>
+               </form>
+               <div class="col-12 mt-2">
+                  <h2 class="text-center text-danger">
+
+                  </h2>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+
+
+</body>
+<script src="./script.js"></script>
+
+</html>

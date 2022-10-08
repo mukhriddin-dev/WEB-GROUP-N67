@@ -1,0 +1,47 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   scroll-behavior: smooth;
+}
+
+
+.card{
+   height: 500px;
+}
+
+.ind{
+   position: absolute;
+   right: 15px;
+   top:40px;
+   font-size: 20px;
+}
+
+
+
+/* ============= modal ===========*/
+
+.modal-wrapper{
+   width: 100%;
+   height: 100vh;
+   background-color: rgba(0, 0, 0, 0.396);
+   position:fixed;
+   z-index: 999999;
+   backdrop-filter: blur(10px);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.modal-box{
+   width: 700px;
+   height: 400px;
+   background-color: #fff;
+   border-radius: 10px;
+}
+
+.slide{
+   transition: all 0.3s ease;
+   transform: translateY(-200%);
+   
+}

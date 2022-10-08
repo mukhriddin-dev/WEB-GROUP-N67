@@ -1,0 +1,11 @@
+#lesson 7 2022.10.08 
+
+
+setAttribute()
+getAttribute()
+practice (toggle menu)
+setInterval() / clearInterval( )
+setTimeOut() / clearTimeout( )
+JavaScript Date Objects [new Date()]
+LIVE 🕙 
+
