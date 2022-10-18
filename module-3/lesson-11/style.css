@@ -5,6 +5,6 @@
   scroll-behavior: smooth;
 }
 
-.imgs{
-  height: 300px;
+main{
+  min-height: calc(100vh - 60px - 60px);
 }
