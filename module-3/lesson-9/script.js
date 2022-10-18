@@ -203,8 +203,15 @@ let products = [{
 
 
 
+function summa(){
+   let sum=products.reduce((a,b)=>{
+      return a+b.price
+   },0);
 
+   $('.sum').textContent=sum;
+}
 
+summa()
 
 
 
@@ -212,7 +219,7 @@ let products = [{
 let brand = [];
 //========== DEFOUL RENDER PRODUCTS =======////
 products.forEach((e) => {
-
+   
    //===== BRANDS NO REPEAT ======/
    if (!brand.includes(e.brand)) {
       brand.push(e.brand)
@@ -262,7 +269,15 @@ $('.form-select').addEventListener('change', (evt) => {
 
 function filterBrand(data) {
 
+   let sum=data.reduce((a,b)=>{
+      return a+b.price
+   },0);
 
+   $('.sum').textContent=sum;
+
+   console.log(sum)
+   
+   
 
    data.forEach((e) => {
       const div = document.createElement("div");
@@ -285,3 +300,5 @@ function filterBrand(data) {
 
    });
 }
+
+
