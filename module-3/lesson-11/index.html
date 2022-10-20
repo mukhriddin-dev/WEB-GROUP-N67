@@ -1,64 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- BS ICONS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- BOOTSTRAP CDN -->
-    <link rel="stylesheet" href="./bootstrap.min.css" />
 
-    <!-- CSS only -->
-    <link rel="stylesheet" href="./style.css" />
-    <title>lesson-11</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- BS ICONS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- BOOTSTRAP CDN -->
+  <link rel="stylesheet" href="./bootstrap.min.css" />
 
-  <body>
-    <header class="bg-danger">
+  <!-- CSS only -->
+  <link rel="stylesheet" href="./style.css" />
+  <title>lesson-11</title>
+</head>
+
+<body>
+  <header class="bg-danger">
+    <div class="container">
+      <nav class="nav p-3 bg-danger">
+        <h2 class="nav-logo text-white text-uppercase">ALL MOVIES</h2>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section>
       <div class="container">
-        <nav class="nav p-3 bg-danger">
-          <h2 class="nav-logo text-white text-uppercase">ALL MOVIES</h2>
-        </nav>
-      </div>
-    </header>
+        <div class="row">
+          <div class="col-lg-4">
 
-    <main>
-      <section>
-        <div class="container">
+            <label for="film_name" class="w-100 my-2">
+              Search by name
+              <input id="film_name" type="text" class="form-control p-3 my-2" placeholder="Enter film name">
+            </label>
+
+            <label for="film_rating" class="w-100 my-2">
+              Sort by rating
+              <input type="number" id="rating" min="1" max="10" class="form-control p-3 my-2"
+                placeholder="Enter film rating">
+            </label>
+            <label for="category_sort" class="w-100 my-2">
+              Sort by category
+              <select id="category_sort" class="form-select">
+                <option value="all" disabled selected>All</option>
+              </select>
+            </label>
+
+            <button class="btn btn-success w-100 my-3">SEARCH</button>
+
+            <div class="card w-100 result p-3 text-center text-success shadow">
+
+              
+            </div>
+
+          </div>
+          <div class="col-lg-6">
+            <div class="wrapper-films">
+
+             
 
 
 
-
-         
+            </div>
+          </div>
         </div>
-      </section>
-    </main>
 
-    <footer class="bg-danger text-white w-100 p-3">
-      <div class="container">
-        <h4 id="copyright"></h4>
+
+
+
       </div>
-    </footer>
-  </body>
-  <script src="./db.js"></script>
-  <script src="./pulign.js"></script>
-  <script src="./script.js"></script>
-  <!-- MDB -->
-  <script
-    type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"
-  ></script>
+    </section>
+  </main>
+
+  <footer class="bg-danger text-white w-100 p-3">
+    <div class="container">
+      <h4 id="copyright"></h4>
+    </div>
+  </footer>
+</body>
+<script src="./db.js"></script>
+<script src="./pulign.js"></script>
+<script src="./script.js"></script>
+<!-- MDB -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"></script>
+
 </html>
