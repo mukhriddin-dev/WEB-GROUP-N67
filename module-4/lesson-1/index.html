@@ -15,7 +15,7 @@
 
   <!-- CSS only -->
   <link rel="stylesheet" href="./style.css" />
-  <title>lesson-11</title>
+  <title>lesson-1</title>
 </head>
 
 <body>
@@ -35,13 +35,13 @@
 
             <label for="film_name" class="w-100 my-2">
               Search by name
-              <input id="film_name" type="text" class="form-control p-3 my-2" placeholder="Enter film name">
+              <input  id="film_name" type="text" class="form-control p-3 my-2" placeholder="Enter film name">
             </label>
 
             <label for="film_rating" class="w-100 my-2">
               Sort by rating
               <input type="number" id="rating" min="1" max="10" class="form-control p-3 my-2"
-                placeholder="Enter film rating">
+                placeholder="Enter film rating" value="1">
             </label>
             <label for="category_sort" class="w-100 my-2">
               Sort by category
@@ -74,7 +74,15 @@
 
       </div>
     </section>
+
+    <div class="modal-contents  d-none">
+      <div class="modal-content">
+        <button id="close" class="btn btn-danger position-absolute end-0 mt-4 me-4">CLOSE</button>
+      </div>
+    </div>
   </main>
+
+
 
   <footer class="bg-danger text-white w-100 p-3">
     <div class="container">

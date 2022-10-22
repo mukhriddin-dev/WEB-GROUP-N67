@@ -8,6 +8,7 @@ const $$=function(selector){
 }
 
 
+
 /// ======= DYNAMIC CREAT ELEMENT ======////
 
 const createElement=function(tagName,className,content){
@@ -21,3 +22,5 @@ const createElement=function(tagName,className,content){
    }
    return newElement;
 }
+
+

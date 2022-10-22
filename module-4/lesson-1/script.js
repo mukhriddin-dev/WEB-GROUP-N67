@@ -1,6 +1,6 @@
 "use strict";
 
-movies.splice(500);
+movies.splice(40);
 
 // ============= NORMLIZE MOVIES ==========////
 
@@ -45,7 +45,7 @@ function renderAllMovies() {
     <ul>
       <li><strong>Year: </strong>${e.year}</li>
       <li><strong>Category: </strong>${e.category}</li>
-      <li><strong>Rating:</strong>5.5</li>
+      <li><strong>Rating:</strong>${e.rating}</li>
     </ul>
     <a href="${e.yotube}" target="_blank" class="btn btn-danger">YouTube </a>
     <button class="btn btn-primary">
@@ -56,6 +56,8 @@ function renderAllMovies() {
 
 `
     );
+
+    card.dataset.moieId=e.id;
 
     $(".wrapper-films").appendChild(card);
   });
@@ -90,29 +92,90 @@ dynamicCategory();
 // ============ ====== ====== ====== DYNAMIC CATEGORIES end ====== ====== ====== ====== ====== ====
 
 
-const findFilm = (str) => {
+
+// ============ ====== ====== ====== FIND FILMS START ====== ====== ====== ====== ====== ====//
+const findFilm = (str,rat, ctg ) => {
 
   return allMovies.filter((e) => {
-    return e.title.match(str);
+    return e.title.match(str) && e.rating >= rat && e.category.includes(ctg)  ;
   })
+
 
 
 }
 
-$("#film_name").addEventListener('keyup',()=>{
-  const searchValue=$("#film_name").value.toLowerCase();
-  const searchtext=new RegExp(searchValue , "gi");
-  const searchResult=findFilm(searchtext);
-  console.log(searchResult);
+$(".btn-success").addEventListener('click', () => {
+  $(".wrapper-films").innerHTML=`"<span class="loader"></span>"`;
+  const searchValue = $("#film_name").value.toLowerCase().trim();
+  const ratingFilm=$('#rating').value;
+  const categorySort=$("#category_sort").value;
 
+
+  console.log(ratingFilm);
+
+  const searchtext = new RegExp(searchValue, "gi");
+
+  const searchResult = findFilm(searchtext, ratingFilm, categorySort);
+
+ setTimeout(()=>{
+  $(".wrapper-films").innerHTML="";
+  renderSearchResult(searchResult);
+  $('.result').innerHTML=`<h2 class="text-danger">${searchResult.length} ta ma'lumot topildi</h2>`;
+ },3000)
+
+
+ 
 
 })
 
-// 
-
-let text="javaScript programming language";
+ // ============ ====== ====== ====== FIND FILMS END ====== ====== ====== ====== ====== ====//
 
 
+ function renderSearchResult(data=[]){
+  data.forEach((e) => {
+    const card = createElement(
+      "div",
+      "card shadow",
+      `
+  
+  <img src="${e.smallImg}" alt="rasm" class="card-img">
+  <div class="card-body">
+    <h5 class="card-title">${e.title}</h5>
+    <ul>
+      <li><strong>Year: </strong>${e.year}</li>
+      <li><strong>Category: </strong>${e.category}</li>
+      <li><strong>Rating:</strong>${e.rating}</li>
+    </ul>
+    <a href="${e.yotube}" target="_blank" class="btn btn-danger">YouTube </a>
+    <button class="btn btn-primary">
+      read more
+    </button>
+
+  </div>
+
+`
+    );
+
+    $(".wrapper-films").appendChild(card);
+  });
+ }
 
 
-console.log(text.match(/p/gi));
+
+//  ---------------------- MODAL WINDOW --------------------------
+ 
+
+// ------- close btn -----
+
+$('#close').addEventListener('click', ()=>{
+  $('.modal-contents').classList.add('d-none')
+})
+
+
+function modalWindow(){
+  
+}
+
+
+
+//  ---------------------- MODAL WINDOW END--------------------------

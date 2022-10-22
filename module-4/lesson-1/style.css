@@ -11,7 +11,63 @@ main{
 
 .wrapper-films{
   display: grid;
-  grid-template-columns: repeat(3, minmax(280px, 1fr));
+  grid-template-columns: repeat( Auto-fill, minmax(280px, 1fr));
   padding: 6px;
   gap: 15px;
 }
+
+.loader{
+  display: block;
+  position: relative;
+  height: 20px;
+  width: 140px;
+  background-image: 
+  linear-gradient(#FFF 20px, transparent 0), 
+  linear-gradient(#FFF 20px, transparent 0), 
+  linear-gradient(#FFF 20px, transparent 0), 
+  linear-gradient(#FFF 20px, transparent 0);
+  background-repeat: no-repeat;
+  background-size: 20px auto;
+  background-position: 0 0, 40px 0, 80px 0, 120px 0;
+  animation: pgfill 1s linear infinite;
+}
+
+@keyframes pgfill {
+  0% {   background-image: linear-gradient(#FFF 20px, transparent 0), linear-gradient(#FFF 20px, transparent 0), linear-gradient(#FFF 20px, transparent 0), linear-gradient(#FFF 20px, transparent 0); }
+  25% {   background-image: linear-gradient(#FF3D00 20px, transparent 0), linear-gradient(#FFF 20px, transparent 0), linear-gradient(#FFF 20px, transparent 0), linear-gradient(#FFF 20px, transparent 0); }
+  50% {   background-image: linear-gradient(#FF3D00 20px, transparent 0), linear-gradient(#FF3D00 20px, transparent 0), linear-gradient(#FFF 20px, transparent 0), linear-gradient(#FFF 20px, transparent 0); }
+  75% {   background-image: linear-gradient(#FF3D00 20px, transparent 0), linear-gradient(#FF3D00 20px, transparent 0), linear-gradient(#FF3D00 20px, transparent 0), linear-gradient(#FFF 20px, transparent 0); }
+  100% {   background-image: linear-gradient(#FF3D00 20px, transparent 0), linear-gradient(#FF3D00 20px, transparent 0), linear-gradient(#FF3D00 20px, transparent 0), linear-gradient(#FF3D00 20px, transparent 0); }
+}
+
+
+
+/* ====================== MODAL CONTENT  ======================*/
+
+.modal-contents{
+  width: 100%;
+  min-height: 100vh;
+  position: fixed;
+  top:0;
+  z-index: 99999999;
+  background-color: rgba(0,0,0,0.8);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-contents .modal-content{
+  max-width: 1250px;
+  min-height: 450px;
+  background-color: #fff;
+}
+
+
+
+
+
+
+
+
+/* ====================== MODAL CONTENT  ======================*/
