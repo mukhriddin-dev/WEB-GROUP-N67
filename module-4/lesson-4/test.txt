@@ -1,0 +1,35 @@
+DAY 4 MONTH 4
+
+localStorage
+
+setItem()
+getItem()
+removeItem()
+clear()
+“storage”
+
+CallBack function
+Synchronous and Asynchronous What is the difference between synchronous and asynchronous code in JavaScript ?
+Promise
+Pending
+fullfiled
+rejected
+fetch
+
+
+
+// localStorage.setItem("lang","english");
+// // localStorage.setItem("key_name","value"); localStorage ga qo'shadi
+
+// // localStorage.removeItem('lang');
+
+// // localStorage.removeItem('language');
+
+// // localStorage.clear();
+
+
+// let lang = localStorage.getItem("lang");
+
+// console.log(lang.length);
+
+

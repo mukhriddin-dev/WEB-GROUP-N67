@@ -1,0 +1,26 @@
+DAY 3 MONTH 4
+
+eventDelegation
+dataset . . .
+
+Template tag
+
+destructuring
+
+rest % spread operator
+
+shallow copy vs deep copy
+
+
+
+localStorage
+
+setItem()
+getItem()
+removeItem()
+clear()
+“storage”
+
+JSON (stringify, parse);
+
+
