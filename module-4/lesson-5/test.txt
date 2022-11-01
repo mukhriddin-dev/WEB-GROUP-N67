@@ -1,0 +1,91 @@
+DAY 5 MONTH 4
+
+CallBack function
+
+Synchronous and Asynchronous What is the difference between synchronous and asynchronous code in JavaScript ?
+   
+Promise
+
+Pending
+fullfiled
+rejected
+fetch
+
+
+
+
+
+
+
+// // callback 
+
+// let array = ['javascript', 'php', 'go', 'react', 'vue'];
+
+
+
+
+
+// function dataRender(CallBack,CallBack2) {
+
+//   setTimeout(()=>{
+
+//   setTimeout(()=>{
+//     array.forEach((e) => {
+//       const cardItem = createElement('div', 'card-item p-2 shadow my-2', e);
+//       $('.wrapper').append(cardItem);
+//     })
+
+//   },1000)
+
+//   CallBack()
+//   },2000)
+
+//   CallBack2()
+
+
+// }
+
+// dataRender(addItem,removeItem)
+
+// function addItem(){
+//   array.push('Java','.NET')
+// }
+
+// function removeItem(){
+//   array.pop()
+// }
+
+// console.log(array);
+
+$('.btn-danger').addEventListener('click', () => {
+
+  console.log('console working');
+
+})
+
+
+
+
+
+function add() {
+
+  console.log("add");
+}
+
+  
+
+function abs() {
+  console.log('abs');
+
+}
+
+function evt(c1,c2) {
+  c1()
+
+console.log('evt');
+
+c2()
+
+}
+
+evt(add,abs)

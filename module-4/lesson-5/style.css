@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.bg{
+  background-color: #3737ff;
+  
+}
+
+.menu{
+  width: 380px;
+}

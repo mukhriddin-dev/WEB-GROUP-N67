@@ -81,19 +81,3 @@ function selectLang(selectedLanguage) {
     selectLang(selected)
   }()
 )
-
-// const obj={
-//   ok:"ok"
-// }
-
-// console.log(obj["ok"]);
-
-// const num=['a','b','c','d','e','f','g'];
-
-// num.forEach((e, i, a)=>{
-//   console.log(e[i]);
-// })
-
-// for(let i=0; i<num.length; i++){
-//   console.log(num[i][i])
-// }
