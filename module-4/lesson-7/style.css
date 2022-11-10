@@ -1,0 +1,16 @@
+body{
+   overflow-x: hidden;
+}
+
+.toastify{
+   background-color: lime;
+   padding: 7px;
+   border-radius: 3px;
+   width: 250px;
+   position: absolute;
+   right: 10px;
+   top: 80px;
+   transform: translateX(200%);
+   transition:transform 1s cubic-bezier(1,-0.21, 0, 1.01);
+   z-index: 9999999;
+}

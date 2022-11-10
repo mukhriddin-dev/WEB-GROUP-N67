@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <!-- normalize css -->
+  <link rel="stylesheet" href="./node_modules/normalize.css/normalize.css">
+  <!-- main css -->
+  <link rel="stylesheet" href="./style.css">
+  <title>CRUD APP</title>
+</head>
+
+<body>
+
+  <div class="toastify">
+    <h5>muaffaqiyatli o'chirildi</h5>
+  </div>
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Update:</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="#" id="sendEdit">
+            <label for="user_name" class="w-100 my-2">
+              Enter username
+              <input type="text" class="form-control" placeholder="Enter username" id="userEdit">
+            </label>
+
+            <label for="user_name" class="w-100 my-2">
+              Enter score
+              <input type="number" max="100" min="0" class="form-control" placeholder="Enter username" id="scoreEdit">
+            </label>
+
+            <button type="submit" class="btn btn-success my-2 w-100">ADD INFORMATION</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <header class="bg-success">
+    <div class="container">
+      <nav class="nav p-3">
+        <h2 class="nav__log text-white">ADMIN DASHBOARD</h2>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 p-2 shadow m-1">
+            <form action="#" id="send">
+              <label for="user_name" class="w-100 my-2">
+                Enter username
+                <input type="text" class="form-control" placeholder="Enter username" id="userName">
+              </label>
+
+              <label for="user_name" class="w-100 my-2">
+                Enter score
+                <input type="number" max="100" min="0" class="form-control" placeholder="Enter username" id="userScore">
+              </label>
+
+              <button type="submit" class="btn btn-success my-2 w-100">ADD INFORMATION</button>
+            </form>
+          </div>
+          <div class="col-md-7 p-2 shadow m-1">
+            <table class="table table-striped table-hover border table-bordered">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Username</th>
+                  <th>score</th>
+                  <th>EDIT</th>
+                  <th>Delete</th>
+                </tr>
+              </thead>
+              <tbody>
+
+
+              </tbody>
+            </table>
+          </div>
+          <div class="col p-2 bg-light shadow m-1">
+            <h5 class="text-center m-3 text-primary">
+              Average score:
+            </h5>
+            <h3 class="text-center" id="averager_score">
+              100
+            </h3>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./plugin.js"></script>
+<script src="./script.js"></script>
+
+</html>
