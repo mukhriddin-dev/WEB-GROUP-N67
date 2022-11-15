@@ -35,7 +35,7 @@
             <label for="user_name" class="w-100 my-2">
               Enter username
               <input type="text" class="form-control" placeholder="Enter username" id="userEdit">
-            </label>
+            </labe>
 
             <label for="user_name" class="w-100 my-2">
               Enter score
@@ -53,8 +53,12 @@
 
   <header class="bg-success">
     <div class="container">
-      <nav class="nav p-3">
+      <nav class="nav d-flex justify-content-between p-3">
         <h2 class="nav__log text-white">ADMIN DASHBOARD</h2>
+        <div class="ul">
+          <button id="login_user" class=" btn btn-info mx-2">Husniddin</button>
+          <button class=" btn btn-danger" id="out">LOG OUT</button>
+        </div>
       </nav>
     </div>
   </header>
@@ -99,7 +103,7 @@
               Average score:
             </h5>
             <h3 class="text-center" id="averager_score">
-              100
+              0
             </h3>
           </div>
         </div>

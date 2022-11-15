@@ -1,0 +1,34 @@
+URL: https://n36-todolist.herokuapp.com/
+Authorization
+
+1) route:  URL/signup
+ method: POST
+ body: { userName, userPassword  }
+ 
+2)  route:  /login
+ method: POST
+ body: { login, password }
+
+CRUD
+
+1)  Har bir odam o’ziga tegishli todo-lar ro’yxatini olish (READ) uchun, natija array qaytadi.
+ route:  URL/todos
+ method:  GET
+ headers:  { token }
+ 
+2) Yangi todo yaratish uchun (CREATE)
+route:  URL/todos
+ method:  POST
+ body: { text }
+ headers:  { token }
+
+3) Eski todoni isCompleted property’siga o’zgartirish kiritish uchun (UPDATE)
+route: URL /todos/:id          // id o’rniga todo-ning id raqamini yuborish kerak
+ method:  PUT
+ headers:  { token }
+
+ 
+4) Eski todoni o’chirib yuborish uchun (DELETE)
+route:  URL/todos/:id          // id o’rniga todo-ning id raqamini yuborish kerak
+ method:  DELETE
+ headers:  { token }

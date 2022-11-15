@@ -1,7 +1,7 @@
 {
   "user": [
     {
-      "user_name": "Farrux Saydullayev",
+      "user_name": "Saidabror",
       "score": "23",
       "id": 3
     },
@@ -9,16 +9,6 @@
       "user_name": "Abbos Mehmonov",
       "score": "100",
       "id": 4
-    },
-    {
-      "user_name": "Navruzbek",
-      "score": "40",
-      "id": 5
-    },
-    {
-      "user_name": "Farrux",
-      "score": "30",
-      "id": 6
     }
   ],
   "rating": [
