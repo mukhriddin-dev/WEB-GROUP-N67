@@ -1,0 +1,6 @@
+1. Context this ,
+2. Function Constructor
+3. Prototype
+4. Closure
+5. Call , Apply , Bind
+6. class , extends , super , constructor

@@ -1,0 +1,91 @@
+1. JavaScript data types 
+2. JavaScript variables 🔴
+3. String methods  -
+4. Array methods 🔴 
+5. "use strict"  🔴
+6. taqqoslash , o'zlashtirish -`
+7. Math object 
+8.  event objects 
+9.  DOM selectors 
+10. Array Higher order functions - 🔴
+11. Events -
+12. Object 🔴
+13. Object methods -
+14. function and function types 
+15. conditional operators 🔴
+16. loops and difference 
+17. Scopes 
+18. atrributes 
+19. cssStyleDeclaration  , HTMLCollection , NodeList -  
+20. setTimeout, setInterval  ? 🔴
+21. Type conversions 
+22. classList 
+24. rest and spread difference -
+25. shalow clone and deep clone
+26. callback functions 🔴
+27. callback hell nima ? 🔴
+28. Promise nima ? -
+29. Constructor  functions ? -
+30. Object vs Class difference ? 🟢
+31. Context this , in function , in object , in expression function -
+32. LocalStorage va uning methodlari ?
+33. match method ? - 🔴
+34. template tag ? 
+35. Call vs Apply -
+36. Closure 🔴
+37. Bind ?
+38. Async and Syncronus -
+39. Remove Duplicates
+40. super keyword ? 🔴
+41. EXTAR++
+
+
+🔴 🟢
+
+
+let obj="2345
+
+
+
+1.Abdulazizov Eshonqul 🔴🟢
+
+2.Abdullayev Mirkamol 🔴🟢
+
+3.Abdulloh Agzamsherov 🔴🟢
+
+4.Abrorov Azizjon 🟢🔴
+
+5.Ahmadaliyev Navro'zbek  🟢 🟢
+
+6.Ahmadqulov Asadbek 🔴🟢
+
+7.Mehmonov Abbos   🟢 🟢
+
+8.Mirkhalikov Mirkamol 🔴🟢
+
+9.Nasimboyev Farxod 🟢🔴
+
+10.Ne'matov Javlonbek 🔴🔴
+
+11.Rahmatillayev Muhammadamin 🔴🔴
+
+12.Ro'zimatov Rustam
+
+13.Saidov Mirziyod 🟢🔴
+
+14. Salohiddionov Husniddin 🟢🟢
+
+15.Saydullayev Farrux 🔴🔴
+
+16.Shirinov Sayfullo 🔴🔴
+
+17.To'raxo'djayev Ismoil 🟢🔴
+
+18.Uzakov Sardor 🟢🟢   
+
+
+
+const a=function(){}
+const b=()=>{}
+
+
