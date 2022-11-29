@@ -2,35 +2,66 @@ import React, { useState, useRef } from "react";
 import Card from "../../UI/Card";
 import "./style.scss";
 import { user } from "./data";
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from "uuid";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const index = () => {
-  const [task, setTask] = useState([
-    { id: 1, title: "lorem ipsum dolor...", deadline: "2022-12-11" },
-  ]);
+  const [task, setTask] = useState([]);
 
+  const [title, setTitle] = useState("");
+  const [deadline, setDeadline] = useState("");
 
-  const [title,setTitle]=useState("");
-  const [deadline,setDeadline]=useState('');
+  const addTask = () => {
+    const check = {
+      title: title.trim().length === 0,
+      deadline: deadline.trim().length === 0,
+    };
 
-
-
-const addTask=()=>{
-   const newTask={
-      id:uuidv4(),
+    const newTask = {
+      id: uuidv4(),
       title: title,
-      deadline: deadline
-   }
+      deadline: deadline,
+    };
 
-console.log(newTask);
+    if (check.title || check.deadline) {
+      toast.error("Iltimos maydonlarni to'ldiring", {
+        position: "bottom-right",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    } else {
+      setTask([...task, newTask]);
+      toast.success("Muaffaqiyatli qo'shildi", {
+        positione: "top-right",
+        autoClose: 1400,
+      });
+    }
 
-}
+    setTitle("");
+    setDeadline("");
+  };
 
+  const deleteTask = (id) => {
+    const newTasks = task.filter((el) => {
+      return el.id !== id;
+    });
 
-
+    setTask(newTasks);
+    toast.info("task deleted",{
+      position: "top-left",
+      autoClose:2000
+    });
+  };
 
   return (
     <>
+      <ToastContainer />
       <section>
         <div className="container">
           <div className="card p-3 shadow mt-5">
@@ -39,13 +70,20 @@ console.log(newTask);
               type="text"
               className="form-control mx-auto w-50 p-3 mb-3"
               placeholder="Enter task name"
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
             />
             <input
               type="date"
               className="form-control mx-auto w-50 p-3"
               placeholder="Enter task deadline"
+              value={deadline}
+              onChange={(e) => setDeadline(e.target.value)}
             />
-            <button className="btn btn-success p-3 mx-auto w-50 mt-3" onClick={()=>addTask()}>
+            <button
+              className="btn btn-success p-3 mx-auto w-50 mt-3"
+              onClick={() => addTask()}
+            >
               ADD NEW TASK
             </button>
           </div>
@@ -61,17 +99,20 @@ console.log(newTask);
 
             <tbody>
               {task.length > 0 ? (
-                task.map((el, i) => {
+                task?.map((el, i) => {
                   return (
-                  
-                      <tr key={el.id}>
-                        <td>{i+1}</td> <td>{el.title}</td>
-                        <td>{el.deadline}</td>
-                        <td>
-                          <button className="btn btn-danger">Remove</button>
-                        </td>
-                      </tr>
-                  
+                    <tr key={el.id}>
+                      <td>{i + 1}</td> <td>{el.title}</td>
+                      <td>{el.deadline}</td>
+                      <td>
+                        <button
+                          className="btn btn-danger"
+                          onClick={() => deleteTask(el.id)}
+                        >
+                          Remove
+                        </button>
+                      </td>
+                    </tr>
                   );
                 })
               ) : (
