@@ -1,0 +1,91 @@
+const [number, setNumber] = useState(0);
+  const [text, setText] = useState("ReactJS developer");
+  const [toggle, setToggle] = useState(true);
+
+  const cardControl = useRef();
+  const boxRef = useRef();
+  const inputRef=useRef();
+
+  const toggleMenu = () => {
+    console.log(cardControl.current);
+    cardControl.current.classList.toggle("swipe");
+  };
+
+  const hideBox = () => {
+    boxRef.current.classList.toggle("d-none");
+  };
+
+
+  const inputSend=()=>{
+     console.log(inputRef.current.value);
+     let text=inputRef.current.value;
+     console.log(text);
+  }
+
+  return (
+    <>
+      <section>
+        <div className="container">
+          <div className="row">
+            <h2 className="text-center">{number}</h2>
+            <h3 className="text-center my-3">{text + number}</h3>
+
+            <div className="col-md-8 p-2 bg-light">
+              <button
+                className="btn btn-primary"
+                onClick={() => setNumber(number + 1)}
+              >
+                +
+              </button>
+
+              <button
+                className="btn btn-warning m-3"
+                onClick={() => setText("Angular js development")}
+              >
+                edit
+              </button>
+
+              <button className="btn btn-info" onClick={() => toggleMenu()}>
+                toggle
+              </button>
+
+              <button className="btn btn-success" onClick={() => hideBox()}>
+                hide box   
+              </button>
+            </div>
+
+            <div className="row">
+              <div
+                className={`card w-75 p-5 shadow mt-4 ${toggle ? "" : "swipe"}`}
+                ref={cardControl}
+              >
+                <div className="card">
+                  <input type="text" className="form-control p-3 m-3 w-50"  ref={inputRef} onChange={()=>inputSend()}/>
+                  <button className="btn btn-primary p-3 w-50 m-3" onClick={()=> inputRef.current.focus()}>SEND</button>
+                </div>
+
+                
+
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+                  aut, qui distinctio ex, ad repudiandae reiciendis numquam
+                  illum, officia dignissimos placeat illo nemo officiis
+                  laboriosam facilis vel. Sapiente similique nihil eos optio
+                  provident hic labore deserunt quis nobis, fugiat enim error
+                  nostrum qui voluptas voluptatem.
+                </p>
+              </div>
+
+              <div className="box p-4 shadow mt-5" ref={boxRef}>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Totam quia sunt eaque voluptates delectus labore deserunt.
+                  Nesciunt, quaerat reiciendis. Illo iusto consequuntur
+                  consectetur libero. Temporibus, non recusandae assumenda
+                  quaerat amet quas nobis hic laborum consequatur praesentium
+                  aut? Enim repellendus debitis aliquam eum odio molestiae nam.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
