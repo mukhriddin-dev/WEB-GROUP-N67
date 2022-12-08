@@ -43,26 +43,26 @@ const t=lang[langs];
               </li>
               <li className="nav__ul--list">
                 <NavLink
-                  to="/link3"
+                  to="/adduser"
                   className={({ isActive }) =>
                     isActive
                       ? "nav__ul--list-item fw-bold text-warning"
                       : "nav__ul--list-item"
                   }
                 >
-                  links-3
+                  {t.adduser}
                 </NavLink>
               </li>
               <li className="nav__ul--list">
                 <NavLink
-                  to="/link4"
+                  to="/userlist"
                   className={({ isActive }) =>
                     isActive
                       ? "nav__ul--list-item fw-bold text-warning"
                       : "nav__ul--list-item"
                   }
                 >
-                  links-4
+                {t.userlist}
                 </NavLink>
               </li>
               <li className="nav__ul--list">

@@ -1,13 +1,18 @@
 import React from "react";
-import Extra1 from "../Extra/Extra1";
+import { NavLink, Outlet } from "react-router-dom";
+
 const index = () => {
   return (
-    <div className="card p-5 shadow mx-auto w-50 mt-5">
-      <h1 className="text-center text-danger">Home page</h1>
-
-      <Extra1 />
-
-      <button className="btn btn-warning"> re send</button>
+    <div className="card p-5 shadow mx-auto w-75 mt-5">
+      <ul className="p-4 bg-info d-flex justify-content-around w-25 list-unstyled">
+        <li className="text-uppercase"><NavLink index to="/home/left">LEFT</NavLink></li>
+        <li className="text-uppercase"><NavLink to="/home/right">RIGHT</NavLink></li>
+      </ul>
+      <div className="row">
+        <div className="col p-5 shadow">
+          <Outlet />
+        </div>
+      </div>
     </div>
   );
 };

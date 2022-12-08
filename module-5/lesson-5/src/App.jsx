@@ -1,33 +1,23 @@
-import React, { useState, useEffect} from "react";
+import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
-import { context } from "./components/context";
+import Countries from "./components/Countries";
+import Country from "./Country";
+import  Left from "./pages/Left";
+import Right from "./pages/Right";
+
 const App = () => {
-  const [data, setData] = useState([]);
-
-
-
-  useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/users")
-      .then((response) => response.json())
-      .then((res) => setData(res));
-  }, []);
-
-  console.log(data);
-let obj={
-  num:111111
-}
-
   return (
     <>
-      <context.Provider value={{data, obj}}>
-        <Routes>
-          <Route
-            path="/"
-            element={<Home/>}
-          />
-        </Routes>
-      </context.Provider>
+      <Routes>
+        <Route path="/" element={<Countries />} />
+        <Route path="/countries" element={<Countries />} />
+        <Route path="/countries/:names" element={<Country />} />
+        <Route path="/home" element={<Home />}>
+          <Route  index path="/home/left" element={<Left />}/>
+          <Route path="/home/right" element={<Right />}/>
+        </Route>
+      </Routes>
     </>
   );
 };
